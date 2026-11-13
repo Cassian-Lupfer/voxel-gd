@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dufasw5pku04g"]
+
+[ext_resource type="Script" uid="uid://cd68cwnwjusjj" path="res://scripts/test_cam.gd" id="1_ca3dd"]
+
+[node name="TestCam" type="Node3D" unique_id=187699555]
+script = ExtResource("1_ca3dd")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=833387403]
+
+[node name="UI" type="Control" parent="." unique_id=967371262]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FPSLabel" type="Label" parent="UI" unique_id=78578589]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

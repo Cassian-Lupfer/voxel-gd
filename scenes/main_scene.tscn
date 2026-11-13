@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cadfldvnl8uck"]
+
+[ext_resource type="Script" uid="uid://gql12oqo676p" path="res://scripts/main_scene.gd" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://dufasw5pku04g" path="res://scenes/test_cam.tscn" id="2_pw63i"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t4xtx"]
+
+[sub_resource type="Sky" id="Sky_jll8d"]
+sky_material = SubResource("ProceduralSkyMaterial_t4xtx")
+
+[sub_resource type="Environment" id="Environment_6rmpw"]
+background_mode = 2
+sky = SubResource("Sky_jll8d")
+
+[node name="MainScene" type="Node3D" unique_id=846488994]
+script = ExtResource("1_w2twt")
+
+[node name="TestCam" parent="." unique_id=856201902 instance=ExtResource("2_pw63i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24.50019)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=682527439]
+environment = SubResource("Environment_6rmpw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1234637703]
+transform = Transform3D(0.8737149, -0.19483617, 0.44571418, 0, 0.9162809, 0.4005362, -0.48643833, -0.34995446, 0.80056834, 0, 0, 0)
